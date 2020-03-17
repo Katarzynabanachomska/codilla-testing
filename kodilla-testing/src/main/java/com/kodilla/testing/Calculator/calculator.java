@@ -1,4 +1,4 @@
-package com.kodilla.testing.calculator;
+package com.kodilla.testing.Calculator;
 
 class Calculator {
     public int addAToB (int a, int b){
