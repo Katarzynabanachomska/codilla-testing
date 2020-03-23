@@ -24,7 +24,7 @@ public class ForumTestSuite {
     public void testCaseUsername(){
         //Given
         SimpleUser simpleUser = new SimpleUser("theForumUser", "Katarzynka");
-                //When
+        //When
         String result = simpleUser.getUsername();
         System.out.println("Testing" + result);
         //Then

@@ -20,6 +20,17 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorEmptyList(){
         //Given
         ArrayList<Integer> numbers = new ArrayList<>();
+        //When
+        OddNumbersExterminator exterminator = new OddNumbersExterminator();
+        ArrayList<Integer> result = exterminator.exterminate(numbers);
+        //Then
+        Assert.assertEquals(numbers, result);
+    }
+
+    @Test
+    public void testOddNumbersExterminatorNormalList(){
+        //Given
+        ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
         numbers.add(3);
@@ -30,19 +41,14 @@ public class CollectionTestSuite {
         numbers.add(8);
         numbers.add(9);
         //When
-        System.out.println("Testing if the list is empty...");
+        OddNumbersExterminator exterminator = new OddNumbersExterminator();
+        ArrayList<Integer> result = exterminator.exterminate(numbers);
+        ArrayList<Integer> number1 = new ArrayList<>();
+        number1.add(2);
+        number1.add(4);
+        number1.add(6);
+        number1.add(8);
         //Then
-        Assert.assertTrue(numbers.isEmpty());
-    }
-
-    @Test
-    public void testOddNumbersExterminatorNormalList(){
-        //Given
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        //When
-        ArrayList<Integer> numbers =new ArrayList<>(100);
-        System.out.println("Testing full list in progers");
-        //Then
-        oddNumbersExterminator.exterminate((ArrayList<Integer>) numbers);
+       Assert.assertEquals(number1, result);
     }
 }
