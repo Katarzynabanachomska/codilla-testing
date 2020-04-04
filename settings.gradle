@@ -1,2 +1,10 @@
 include 'kodilla-testing'
-
+buildscript {
+    ext {
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+    }
+}
