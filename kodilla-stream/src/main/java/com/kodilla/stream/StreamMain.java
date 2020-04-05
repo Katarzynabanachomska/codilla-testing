@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.Executor;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.lambda.Processor;
@@ -9,6 +10,10 @@ import jdk.nashorn.internal.objects.NativeString;
 
 public class StreamMain {
     public static void main(String[] args) {
+        //MODULE 7.2
+        System.out.println ("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
+
         Processor processor = new Processor();
         Executor codeToExecute = () -> System.out.println("This is an example text.");
         processor.execute(codeToExecute);
