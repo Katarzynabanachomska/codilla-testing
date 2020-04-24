@@ -2,16 +2,14 @@ package com.kodilla.exception.test;
 
 public class FirstChallenge {
     public double divide(double a, double b) throws ArithmeticException {
-        if(b == 0);
-        if(a == 0) {
+        if(b == 0 || a == 0) {
             throw new ArithmeticException();
         }
         return a / b;
     }
 
     public double multiplication (double x, double y) throws ArithmeticException {
-        if (x == 0);
-        if (y == 0) {
+        if (x == 0 || y == 0){
             throw new ArithmeticException();
         }
         return x*y;
