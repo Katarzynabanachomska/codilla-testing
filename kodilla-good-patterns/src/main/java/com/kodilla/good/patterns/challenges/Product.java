@@ -16,18 +16,22 @@ public class Product {
     }
 
     public String getNameProduct() {
+
         return nameProduct;
     }
 
     public double getPrice() {
+
         return price;
     }
 
     public Integer getProductId() {
+
         return productId;
     }
 
     public Integer getQuantity() {
+
         return quantity;
     }
 
@@ -44,6 +48,7 @@ public class Product {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(getNameProduct(), getPrice(), getProductId(), getQuantity());
     }
 }

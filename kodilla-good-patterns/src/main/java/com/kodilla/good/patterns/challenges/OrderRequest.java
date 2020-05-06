@@ -14,14 +14,17 @@ public class OrderRequest {
     }
 
     public User getUser() {
+
         return user;
     }
 
     public Product getListOfOrderedProducts() {
+
         return listOfOrderedProducts;
     }
 
     public LocalDateTime getOrderedAt() {
+
         return orderedAt;
     }
 }

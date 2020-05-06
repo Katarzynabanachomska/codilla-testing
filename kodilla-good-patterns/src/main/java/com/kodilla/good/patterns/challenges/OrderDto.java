@@ -12,14 +12,17 @@ public class OrderDto {
     }
 
     public User getUser() {
+
         return user;
     }
 
     public Product getListOfOrderedProducts() {
+
         return listOfOrderedProducts;
     }
 
     public boolean isOrdered() {
+
         return isOrdered;
     }
 }

@@ -14,14 +14,17 @@ public class User {
     }
 
     public String getName() {
+
         return name;
     }
 
     public String getSurname() {
+
         return surname;
     }
 
     public Integer getUserId() {
+
         return userId;
     }
 
@@ -46,6 +49,7 @@ public class User {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(getName(), getSurname(), getUserId());
     }
 }

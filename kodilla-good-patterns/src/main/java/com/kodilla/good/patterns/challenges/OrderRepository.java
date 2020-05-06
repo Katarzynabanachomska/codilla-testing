@@ -1,5 +1,5 @@
 package com.kodilla.good.patterns.challenges;
 
-public interface ProductRepository {
+public interface OrderRepository {
     void saveOrderIntoRepository(OrderRequest orderRequest);
 }

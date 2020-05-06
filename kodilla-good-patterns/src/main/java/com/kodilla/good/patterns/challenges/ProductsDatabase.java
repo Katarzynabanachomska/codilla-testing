@@ -14,18 +14,14 @@ public class ProductsDatabase {
             System.out.println("There is already: " + product + "in database");
         }
     }
-    boolean availabilityOfProducts (Product listOfProduct) {
+    boolean availabilityOfProducts (Product product) {
         int quantityOfAvailableProduct = 0;
         for (Map.Entry<Integer, Product> entry : productMap.entrySet()) {
-            for (Product product : listOfProduct) {
                 if (entry.getValue().equals(product)) {
-                    quantityOfAvailableProduct++;
+                    return true;
                 }
-            }
         }
-        if (quantityOfAvailableProduct == listOfProduct.size()) {
-            return true;
-        }
+
         System.out.println("There are no such quantities of products");
         return false;
     }

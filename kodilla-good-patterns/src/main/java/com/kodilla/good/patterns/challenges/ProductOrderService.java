@@ -2,20 +2,23 @@ package com.kodilla.good.patterns.challenges;
 
 public class ProductOrderService {
     private OrderService orderService;
-    private ProductRepository productRepository;
+    private OrderRepository orderRepository;
     private InformationServices informationServices;
+    private UserDto userDto;
 
-    public ProductOrderService(OrderService orderService, ProductRepository productRepository, InformationServices informationServices) {
+    public ProductOrderService(OrderService orderService, OrderRepository orderRepository,
+                               InformationServices informationServices, UserDto userDto) {
         this.orderService = orderService;
-        this.productRepository = productRepository;
+        this.orderRepository = orderRepository;
         this.informationServices = informationServices;
+        this.userDto = userDto;
     }
 
-    OrderDto process (final OrderRequest orderRequest, final ProductsDatabase productsDatabase, final UserDto userDto) {
-        boolean isOrdered = orderService.order(orderRequest, productsDatabase , userDto);
+    OrderDto process (final OrderRequest orderRequest, final ProductsDatabase productsDatabase) {
+        boolean isOrdered = orderService.order(orderRequest, productsDatabase, userDto);
         if (isOrdered) {
             informationServices.sendConfirmationToUser(orderRequest.getUser());
-            productRepository.saveOrderIntoRepository(orderRequest);
+            orderRepository.saveOrderIntoRepository(orderRequest);
             System.out.println("Order is acepted :)");
             return new OrderDto(orderRequest.getUser(), orderRequest.getListOfOrderedProducts(), true);
         }
