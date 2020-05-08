@@ -28,14 +28,10 @@ public class AllegroApp {
 
         OrderRequest orderRequest = new OrderRequest(user1, product1, LocalDateTime.of(2020, 3, 4, 8, 5));
 
-        UserDto userDto = new UserDto();
-        userDto.addClient(user1);
-        userDto.addClient(user2);
-
         InformationServices emailInformationServices = new EmailInformationServices();
         OrderService userOrderChecker = new UserOrderChecker();
         OrderRepository myNewOrderRepository = new OrderDbService();
-        ProductOrderService productOrderService = new ProductOrderService(userOrderChecker, myNewOrderRepository, emailInformationServices, userDto);
+        ProductOrderService productOrderService = new ProductOrderService(userOrderChecker, myNewOrderRepository, emailInformationServices);
         productOrderService.process(orderRequest, productsDatabase);
 
     }
