@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_main.iml" group="kodilla-course/kodilla-testing" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_test.iml" group="kodilla-course/kodilla-testing" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test.iml" filepath="$PROJECT_DIR$/.idea/modules/test.iml" />
     </modules>
   </component>
 </project>

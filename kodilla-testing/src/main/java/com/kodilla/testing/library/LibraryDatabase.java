@@ -14,7 +14,7 @@ public interface LibraryDatabase {
     // and returns false when book is unavailable to rent
     boolean rentABook(LibraryUser libraryUser, Book book);
 
-    // return all books borrowed by libraryUser to the library
+    // return all books borrowed by libraryUser to the com.kodilla.spring.library
     // returns number of books returned back
     int returnBooks(LibraryUser libraryUser);
 }
