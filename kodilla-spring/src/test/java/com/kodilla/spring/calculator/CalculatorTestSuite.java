@@ -55,7 +55,7 @@ public class CalculatorTestSuite {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
-        //When
+        //Whenit
         double result = calculator.div(3,3);
         //Then
         Assert.assertEquals(1.0, result,0.001);
